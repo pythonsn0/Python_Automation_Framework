@@ -13,7 +13,7 @@ class TestOrangeHRM():
     def test_login(self):
 
         driver = self.driver
-        driver.get(utils.URL)
+        #driver.get(utils.URL)
         login = LoginPage(driver)
         login.enter_username(utils.USERNAME)
         login.enter_password(utils.PASSWORD)
@@ -58,3 +58,11 @@ class TestOrangeHRM():
 # python -m pytest --alluredir=C:\Study\Python\Python_Automation_Framework\reports\allure-reports
 # python -m pytest --alluredir=reports/allure-reports
 # allure serve reports/allure-reports
+# Jenkins
+# java -jar jenkins.war --httpPort=9393
+# localhost:9393
+
+#Jenkins initial setup is required. An admin user has been created and a password generated.
+#Please use the following password to proceed to installation:
+
+#618bd1b7c8c34210b20f6a18b2a22216

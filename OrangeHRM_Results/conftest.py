@@ -18,6 +18,7 @@ def test_setup(request):
         driver = webdriver.Edge(executable_path=utils.EDGE_PATH)
     elif browser == 'firefox':
         driver = webdriver.Firefox(executable_path=utils.FIREFOX_PATH)
+    driver.get(utils.URL)
     driver.implicitly_wait(5)
     driver.maximize_window()
     request.cls.driver = driver
