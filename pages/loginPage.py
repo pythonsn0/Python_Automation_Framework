@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from locators.locators import Locators
 
 
@@ -9,13 +11,13 @@ class LoginPage():
         self.login_button_id = Locators.login_button_id
 
     def enter_username(self, username):
-        self.driver.find_element_by_id(self.username_text_box_id).clear()
-        self.driver.find_element_by_id(self.username_text_box_id).send_keys(username)
+        self.driver.find_element(By.ID, self.username_text_box_id).clear()
+        self.driver.find_element(By.ID, self.username_text_box_id).send_keys(username)
 
     def enter_password(self, password):
-        self.driver.find_element_by_id(self.password_textbox_id).clear()
-        self.driver.find_element_by_id(self.password_textbox_id).send_keys(password)
+        self.driver.find_element(By.ID, self.password_textbox_id).clear()
+        self.driver.find_element(By.ID, self.password_textbox_id).send_keys(password)
 
     def click_login(self):
-        self.driver.find_element_by_id("btnLogin").click()
+        self.driver.find_element(By.ID, "btnLogin").click()
 

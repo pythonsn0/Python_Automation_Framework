@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from locators.locators import Locators
 
 
@@ -8,7 +10,7 @@ class HomePage():
         self.logout_link_linkText = Locators.logout_link_linkText
 
     def click_welcome(self):
-        self.driver.find_element_by_id(self.welcome_link_id).click()
+        self.driver.find_element(By.ID, self.welcome_link_id).click()
 
     def click_logout(self):
-        self.driver.find_element_by_link_text(self.logout_link_linkText).click()
+        self.driver.find_element(By.LINK_TEXT, self.logout_link_linkText).click()
